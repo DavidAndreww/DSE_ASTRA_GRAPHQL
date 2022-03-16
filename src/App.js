@@ -22,6 +22,7 @@ const App = () => {
       setPageState(responseBody.data.reference_list.pageState)
       setGenres(gs => (gs || []).concat(responseBody.data.reference_list.values))
       setIsFetching(false)
+      console.log(responseBody)
     }
   }
 

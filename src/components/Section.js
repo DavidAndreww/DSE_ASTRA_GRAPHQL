@@ -14,12 +14,13 @@ const Section = ({ genre }) => {
     setMovies(responseBody.data.movies_by_genre.values)
     setPageState(responseBody.data.movies_by_genre.pageState)
   }
-
+  
   useEffect(() => {
     fetchData()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-
+  
+  console.log(movies)
   return (
     <>
       <h2 id={genre}>{genre}</h2>
